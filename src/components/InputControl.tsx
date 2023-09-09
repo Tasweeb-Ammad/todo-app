@@ -4,6 +4,7 @@ interface InputControlProps {
   label: string;
   type: string;
   placeholder: string;
+  handleInputChange: (type: string, value: string) => void;
 }
 
 const style = {
@@ -13,7 +14,12 @@ const style = {
     "rounded-[5px] border border-solid border-[#eee] outline-0 py-[10px] px-[15px] hover:border-[#ccc] focus:border-[#9900ff]",
 };
 
-const InputControl = ({ label, type, placeholder }: InputControlProps) => {
+const InputControl = ({
+  label,
+  type,
+  placeholder,
+  handleInputChange,
+}: InputControlProps) => {
   return (
     <div className={style.container}>
       {label && <label className={style.label}>{label}</label>}
@@ -21,6 +27,7 @@ const InputControl = ({ label, type, placeholder }: InputControlProps) => {
         type={type}
         placeholder={placeholder}
         className={style.input}
+        onChange={(e) => handleInputChange(type, e.target.value)}
       ></input>
     </div>
   );
