@@ -10,7 +10,7 @@ const style = {
   button:
     "w-full transition outline-0 border-0 bg-[#9900ff] text-[#fff] rounded-[5px] font-bold text-s py-[10px] py-[16px] hover:bg-[#cc80ff]",
   text: "font-semibold color-[#000]",
-  span: "font-bold text-[#9900ff] text-s tracking-wider hover:text-[#cc80ff]",
+  span: "font-bold text-[#9900ff] text-s tracking-wider ml-2 hover:text-[#cc80ff]",
 };
 
 const SignIn = () => {
@@ -20,18 +20,18 @@ const SignIn = () => {
         <h1 className={style.heading}>Sign In</h1>
         <InputControl
           label="Email"
-          type="Email"
+          type="email"
           placeholder="Enter email address"
         />
         <InputControl
           label="Password"
-          type="Password"
+          type="password"
           placeholder="Enter password"
         />
         <div className={style.footer}>
           <button className={style.button}>Sign In</button>
           <p className={style.text}>
-            Don't have an account?{" "}
+            Don't have an account?
             <span className={style.span}>
               <Link to="/signUp">Sign Up</Link>
             </span>
