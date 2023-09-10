@@ -69,6 +69,7 @@ const SignUp = () => {
       setSubmitButtonDisabled(false);
       if (error && typeof error === "object" && error instanceof Error) {
         setError(error.message);
+        setInputValues({ name: "", email: "", password: "" });
       }
     }
   };
@@ -81,18 +82,21 @@ const SignUp = () => {
           label="Name"
           type="text"
           placeholder="Enter your name"
+          value={inputValues.name}
           handleInputChange={handleInputChange}
         />
         <InputControl
           label="Email"
           type="email"
           placeholder="Enter email address"
+          value={inputValues.email}
           handleInputChange={handleInputChange}
         />
         <InputControl
           label="Password"
           type="password"
           placeholder="Enter password"
+          value={inputValues.password}
           handleInputChange={handleInputChange}
         />
         <b className={style.error}>{error}</b>

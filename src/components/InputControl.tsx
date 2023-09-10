@@ -4,6 +4,7 @@ interface InputControlProps {
   label: string;
   type: string;
   placeholder: string;
+  value: string;
   handleInputChange: (type: string, value: string) => void;
 }
 
@@ -18,6 +19,7 @@ const InputControl = ({
   label,
   type,
   placeholder,
+  value,
   handleInputChange,
 }: InputControlProps) => {
   return (
@@ -26,6 +28,7 @@ const InputControl = ({
       <input
         type={type}
         placeholder={placeholder}
+        value={value}
         className={style.input}
         onChange={(e) => handleInputChange(type, e.target.value)}
       ></input>

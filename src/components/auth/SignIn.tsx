@@ -73,12 +73,14 @@ const SignIn = () => {
           label="Email"
           type="email"
           placeholder="Enter email address"
+          value={inputValues.email}
           handleInputChange={handleInputChange}
         />
         <InputControl
           label="Password"
           type="password"
           placeholder="Enter password"
+          value={inputValues.password}
           handleInputChange={handleInputChange}
         />
         <b className={style.error}>{error}</b>
