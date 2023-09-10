@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { FaRegTrashAlt } from "react-icons/fa";
 
-import TodoList from "components/TodoList";
 import { db } from "../config/firebase";
 import {
   getDocs,
